@@ -1,0 +1,15 @@
+config BR2_PACKAGE_LIBVA_V4L2_REQUEST
+	bool "libva-v4l2-request"
+	select BR2_PACKAGE_LINUX_HEADERS
+	select BR2_PACKAGE_LIBVA
+	select BR2_PACKAGE_LIBDRM
+	help
+	  This libVA backend is designed to work with the Linux
+	  Video4Linux2 Request API that is used by a number of
+	  video codecs drivers, including the Video Engine found
+	  in most Allwinner SoCs.
+
+	  https://github.com/bootlin/libva-v4l2-request
+
+comment "v4l2-request needs a toolchain w/ threads, dynamic library"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS
