@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LIBVA_DUMP
+	bool "libva-dump"
+	select BR2_PACKAGE_LIBVA
+	select BR2_PACKAGE_LIBDRM
+	help
+	  libva-dump allows dumping metadata and slices from videos.
+
+	  https://github.com/bootlin/libva-dump
+
+comment "libva-dump needs a toolchain w/ threads, dynamic library"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS

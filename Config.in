@@ -1,1 +1,2 @@
 source "package/libva-v4l2-request/Config.in"
+source "package/libva-dump/Config.in"
