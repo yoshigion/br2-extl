@@ -1,0 +1,15 @@
+config BR2_PACKAGE_V4L2_REQUEST_TEST
+	bool "v4l2-request-test"
+	select BR2_PACKAGE_LIBVA
+	select BR2_PACKAGE_LIBDRM
+	help
+	  This standalone tool was designed to help with development
+	  and testing of the Cedrus driver, that supports the Video Engine
+	  found on most Allwinner SoCs.
+	  It implements the Linux v4l2 Request API, so it can help to test
+	  any driver being developed using that API.
+
+	  https://github.com/bootlin/v4l2-request-test
+
+comment "v4l2-request-test needs a toolchain w/ threads, dynamic library"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS

@@ -1,0 +1,38 @@
+From 40cd3887b71e6c335bc0491df33438bce4ca5753 Mon Sep 17 00:00:00 2001
+From: Yoshimasa Obayashi <obayashi.yoshimasa@seek-the-truth.org>
+Date: Wed, 12 Aug 2020 09:23:03 +0900
+Subject: [PATCH] Makefile: comment out variables that defined by Buildroot
+
+---
+ Makefile | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 4944127..5c32fb9 100644
+--- a/Makefile
++++ b/Makefile
+@@ -16,7 +16,7 @@
+ 
+ # Tools
+ 
+-CC = gcc
++#CC = gcc	# defined by Buildroot
+ 
+ # Project
+ 
+@@ -35,9 +35,9 @@ DEPS = $(SOURCES:.c=.d)
+ 
+ # Compiler
+ 
+-CFLAGS += -Wunused-variable -Iinclude
+-CFLAGS += $(shell pkg-config --cflags libdrm)
+-LDFLAGS = $(shell pkg-config --libs libdrm)
++#CFLAGS += -Wunused-variable -Iinclude		# defined by mk of Buildroot
++#CFLAGS += $(shell pkg-config --cflags libdrm)	# defined by mk of Buildroot
++#LDFLAGS = $(shell pkg-config --libs libdrm)	# defined by mk of Buildroot
+ 
+ # Produced files
+ 
+-- 
+2.25.1
+
