@@ -1,3 +1,4 @@
+if BR2_PACKAGE_XSERVER_XORG_SERVER
 config BR2_PACKAGE_V4L2_REQUEST_TEST
 	bool "v4l2-request-test"
 	select BR2_PACKAGE_LIBVA
@@ -11,6 +12,7 @@ config BR2_PACKAGE_V4L2_REQUEST_TEST
 	  any driver being developed using that API.
 
 	  https://github.com/bootlin/v4l2-request-test
+endif
 
 comment "v4l2-request-test needs a xserver_xorg-server"
 	depends on !BR2_PACKAGE_XSERVER_XORG_SERVER
