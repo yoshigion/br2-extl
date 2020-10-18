@@ -1,0 +1,2 @@
+config BR2_PACKAGE_TEST_MOD
+	bool "test_mod"

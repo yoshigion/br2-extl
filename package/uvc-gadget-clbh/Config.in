@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_UVC_GADGET_CLBH
+	bool "uvc-gadget-clbh"
+	help
+	  uvc-gadget application of climberhunt
+
+	  https://github.com/climberhunt/uvc-gadget.git

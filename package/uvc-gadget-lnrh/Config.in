@@ -1,0 +1,5 @@
+menuconfig BR2_PACKAGE_UVC_GADGET_LNRH
+	bool "uvc-gadget-lnrh"
+	help
+	  uvc-gadget application for YUVV uncompress payload
+

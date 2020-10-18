@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_UVC_GADGET_YSGN
+	bool "uvc-gadget-ysgn"
+	help
+	  uvc-gadget application
+
+	  https://github.com/yoshigion/uvc-gadget

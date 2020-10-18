@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_UVC_GADGET_UPST
+	bool "uvc-gadget-upst"
+	help
+	  uvc-gadget application upstream
+
+	  git://git.ideasonboard.org/uvc-gadget.git
